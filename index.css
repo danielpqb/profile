@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+body {
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+main {
+    display: flex;
+    padding: 0px 0px;
+}
+
+.page {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    margin: 20px;
+}
+
+.name h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.name h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(119, 119, 119);
+}
+
+.section ion-icon {
+    font-size: 18px;
+    margin: 3px;
+    color: rgb(187, 178, 53);
+}
+
+.section h1 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hLine {
+    background-color: rgba(0, 0, 0, 0);
+    height: 1px;
+}
+
+.profilePhoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: rgb(41, 41, 41);
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profilePhoto img {
+    box-sizing: border-box;
+    object-fit: contain;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid rgba(156, 156, 156, 0.5);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profilePhoto div {
+    font-size: 12px;
+    padding: 4px;
+    color: rgb(230, 230, 230);
+}
+
+.leftHeader {
+    width: 150px;
+    min-width: 150px;
+}
+
+.rightHeader {
+    min-width: 40px;
+}
+
+.rightIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 40px;
+    background-color: rgb(110, 110, 110);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 2px 0px;
+}
+
+.rightIcon ion-icon {
+    font-size: 20px;
+    color: white;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.category h1 {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 2px;
+}
+
+.category h2 {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.category ion-icon {
+    font-size: 25px;
+    margin: 8px;
+}
