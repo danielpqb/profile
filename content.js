@@ -31,8 +31,7 @@ const leftHeader = `
         <img src="img/profilePhoto.jpg">
         <div>DANIEL BARROS</div>
     </div>
-    <a href="https://danielpqb.github.io/profile/index">
-    <!--<a href="file:///home/danielpqb/Daniel/profile/index.html">-->
+    <a class="disabledLink" href="https://danielpqb.github.io/profile/index">
         <div class="category">
             <ion-icon name="person"></ion-icon>
             <h1>ABOUT ME</h1>
@@ -41,7 +40,6 @@ const leftHeader = `
     </a>
     <div class="hLine"></div>
     <a href="https://danielpqb.github.io/profile/resume">
-    <!--<a href="file:///home/danielpqb/Daniel/profile/resume.html">-->
         <div class="category">
             <ion-icon name="newspaper"></ion-icon>
             <h1>RESUME</h1>
@@ -50,7 +48,6 @@ const leftHeader = `
     </a>
     <div class="hLine"></div>
     <a href="https://danielpqb.github.io/profile/portfolio">
-    <!--<a href="file:///home/danielpqb/Daniel/profile/portfolio.html">-->
         <div class="category">
             <ion-icon name="briefcase"></ion-icon>
             <h1>PORTFOLIO</h1>
@@ -59,7 +56,6 @@ const leftHeader = `
     </a>
     <div class="hLine"></div>
     <a href="https://danielpqb.github.io/profile/contact">
-    <!--<a href="file:///home/danielpqb/Daniel/profile/contact.html">-->
         <div class="category">
             <ion-icon name="call"></ion-icon>
             <h1>CONTACT</h1>
@@ -74,16 +70,14 @@ const leftHeader2 = `
         <img src="img/profilePhoto.jpg">
         <div>DANIEL BARROS</div>
     </div>
-    <!--<a href="https://danielpqb.github.io/profile/index">-->
-    <a href="file:///home/danielpqb/Daniel/profile/index.html">
-        <div class="category">
+    <a class="disabledLink" href="file:///home/danielpqb/Daniel/profile/index.html">
+        <div class="category selectedCategory">
             <ion-icon name="person"></ion-icon>
             <h1>ABOUT ME</h1>
             <h2>WHO AM I</h2>
         </div>
     </a>
     <div class="hLine"></div>
-    <!--<a href="https://danielpqb.github.io/profile/resume">-->
     <a href="file:///home/danielpqb/Daniel/profile/resume.html">
         <div class="category">
             <ion-icon name="newspaper"></ion-icon>
@@ -92,7 +86,6 @@ const leftHeader2 = `
         </div>
     </a>
     <div class="hLine"></div>
-    <!--<a href="https://danielpqb.github.io/profile/portfolio">-->
     <a href="file:///home/danielpqb/Daniel/profile/portfolio.html">
         <div class="category">
             <ion-icon name="briefcase"></ion-icon>
@@ -101,7 +94,6 @@ const leftHeader2 = `
         </div>
     </a>
     <div class="hLine"></div>
-    <!--<a href="https://danielpqb.github.io/profile/contact">-->
     <a href="file:///home/danielpqb/Daniel/profile/contact.html">
         <div class="category">
             <ion-icon name="call"></ion-icon>
@@ -111,5 +103,7 @@ const leftHeader2 = `
     </a>
 </div>`
 
+
 document.querySelector('.rightHeader').innerHTML = rightHeader
 document.querySelector('.leftHeader').innerHTML = leftHeader //leftHeader2
+

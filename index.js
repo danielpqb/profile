@@ -1,26 +1,50 @@
-const pageURL = document.location.href
-
 const leftButtons = document.querySelectorAll('.category')
 
-leftButtons.forEach((button, i)=>{
+leftButtons.forEach((button, i) => {
     button.id = i
+    button.onclick = selectCategory
 })
+
+function selectCategory() {
+    document.querySelector('.disabledLink').classList.remove('disabledLink')
+    document.querySelector('.selectedCategory').classList.remove('selectedCategory')
+
+    this.classList.add('selectedCategory')
+    this.parentNode.classList.add('disabledLink')
+}
 
 switch (pageURL) {
     case 'https://danielpqb.github.io/profile/resume':
         document.getElementById(1).classList.add('selectedCategory')
+        document.getElementById(1).parentNode.classList.add('disabledLink')
         break
     case 'https://danielpqb.github.io/profile/portfolio':
         document.getElementById(2).classList.add('selectedCategory')
+        document.getElementById(2).parentNode.classList.add('disabledLink')
         break
     case 'https://danielpqb.github.io/profile/contact':
         document.getElementById(3).classList.add('selectedCategory')
+        document.getElementById(3).parentNode.classList.add('disabledLink')
+        break
+    //For developing
+    case 'file:///home/danielpqb/Daniel/profile/resume.html':
+        document.getElementById(1).classList.add('selectedCategory')
+        document.getElementById(1).parentNode.classList.add('disabledLink')
+        break
+    case 'file:///home/danielpqb/Daniel/profile/portfolio.html':
+        document.getElementById(2).classList.add('selectedCategory')
+        document.getElementById(2).parentNode.classList.add('disabledLink')
+        break
+    case 'file:///home/danielpqb/Daniel/profile/contact.html':
+        document.getElementById(3).classList.add('selectedCategory')
+        document.getElementById(3).parentNode.classList.add('disabledLink')
         break
     default:
         document.getElementById(0).classList.add('selectedCategory')
+        document.getElementById(0).parentNode.classList.add('disabledLink')
         break
-
 }
+
 
 // Developing
 /*
