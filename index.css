@@ -42,7 +42,7 @@ a:hover {
 .page {
     width: calc(100% - 30px);
     max-width: 100vw;
-    height: 900px;
+    min-height: 900px;
     background-color: var(--page-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 15px;
@@ -69,6 +69,7 @@ a:hover {
     font-size: 40px;
     font-weight: 500;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 .name h2 {
@@ -242,12 +243,12 @@ main .leftHeader .selectedCategory {
 
     .profilePhoto {
         position: fixed;
-        bottom: 0;
+        top: 0;
         left: 0;
     }
 
     .profilePhoto img {
-        border-radius: 5px 5px 0px 0px;
+        border-radius: 0px 0px 5px 5px;
         width: 110px;
     }
 
@@ -263,14 +264,14 @@ main .leftHeader .selectedCategory {
     .leftHeader {
         justify-content: flex-end;
         align-items: flex-end;
-        top: 0;
+        bottom: 0;
         z-index: 1;
     }
 
     .rightHeader {
         justify-content: flex-end;
         align-items: flex-end;
-        bottom: 0;
+        top: 0;
         z-index: 1;
     }
 
@@ -280,15 +281,25 @@ main .leftHeader .selectedCategory {
 
     .category {
         min-width: calc(25vw - 20px);
-        border-radius: 0px 0px 15px 15px;
+        border-radius: 15px 15px 0px 0px;
+        margin-bottom: 0;
     }
 
     .rightIcon {
-        border-radius: 15px 15px 0px 0px;
+        border-radius: 0px 0px 15px 15px;
+        margin-top: 0;
     }
 
     .page {
-        margin-top: 80px;
+        margin-bottom: 80px;
+    }
+
+    div a img {
+        max-width: 90vw;
+    }
+
+    .name {
+        margin-left: 80px;
     }
 
 }
