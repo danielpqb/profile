@@ -26,7 +26,6 @@ const rightHeader = `
 </a>`
 
 const leftHeader = `
-<div class="leftHeader">
     <div class="profilePhoto">
         <img src="img/profilePhoto.jpg">
         <div>DANIEL BARROS</div>
@@ -38,15 +37,11 @@ const leftHeader = `
         <h2>WHO AM I</h2>
     </div>
 
-    <div class="hLine"></div>
-
     <div class="category">
         <ion-icon name="newspaper"></ion-icon>
         <h1>RESUME</h1>
         <h2>CV</h2>
     </div>
-
-    <div class="hLine"></div>
 
     <div class="category">
         <ion-icon name="briefcase"></ion-icon>
@@ -54,13 +49,10 @@ const leftHeader = `
         <h2>MY WORKS</h2>
     </div>
 
-    <div class="hLine"></div>
-
     <div class="category">
         <ion-icon name="call"></ion-icon>
         <h1>CONTACT</h1>
         <h2>SAY HELLO</h2>
-    </div>
 </div>`
 
 const resumeContent = `

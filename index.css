@@ -5,6 +5,16 @@
     src: url(./src/Helvetica.ttf);
 }
 
+:root {
+    --blue0: #003B73;
+    --blue1: #0074B7;
+    --blue2: #60A3D9;
+    --blue3: #BFD7ED;
+    --yellow1: rgb(248, 249, 215);
+    --body-color: rgb(235, 235, 235);
+    --page-color: rgba(255, 245, 255, 0.8);
+}
+
 * {
     font-family: 'Helvetica';
     font-weight: thin;
@@ -12,7 +22,7 @@
 
 body {
     margin: 15px;
-    background-color: rgba(0, 0, 50, 0.2);
+    background-color: var(--body-color);
 }
 
 main {
@@ -30,8 +40,10 @@ a:hover {
 }
 
 .page {
-    width: 100%;
-    background-color: rgba(255, 245, 255, 0.8);
+    width: calc(100% - 30px);
+    max-width: 100vw;
+    height: 900px;
+    background-color: var(--page-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 15px;
 
@@ -96,11 +108,6 @@ a:hover {
     padding: 10px 0px;
 }
 
-.hLine {
-    background-color: rgba(0, 0, 0, 0);
-    height: 1px;
-}
-
 .profilePhoto {
     display: flex;
     flex-direction: column;
@@ -148,6 +155,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     width: 100%;
+    min-width: 40px;
     min-height: 40px;
     background-color: rgb(110, 110, 110);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -168,12 +176,18 @@ a:hover {
     align-items: center;
     padding: 10px;
 
-    background-color: rgba(255, 245, 255, 0.6);
+    background-color: rgba(255, 245, 255);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     border-radius: 15px 0px 0px 15px;
 
     margin-bottom: 2px;
+
+    filter: grayscale(1);
+}
+
+.category * {
+    color: var(--blue0);
 }
 
 .category h1 {
@@ -183,34 +197,98 @@ a:hover {
 }
 
 .category h2 {
-    font-size: 9px;
+    font-size: 10px;
     margin-bottom: 5px;
     font-style: italic;
 }
 
 .category ion-icon {
-    font-size: 20px;
+    font-size: 22px;
     margin: 8px;
 }
 
 .category:hover {
-    background-color: rgba(0, 0, 200, 0.5);
+    background-color: var(--blue3);
     cursor: pointer;
 }
 
 .rightIcon:hover {
-    background-color: rgba(0, 0, 200, 0.6);
+    background-color: var(--blue0);
     cursor: pointer;
 }
 
-.selectedCategory {
-    background-color: rgba(0, 0, 200, 0.6);
+main .leftHeader .selectedCategory {
+    background-color: var(--blue0);
+    filter: grayscale(0.6);
 }
 
-.rotate{
+.selectedCategory * {
+    color: var(--blue3);
+}
+
+.rotate {
     transform: rotateY(180deg);
 }
 
 .disabledLink {
     pointer-events: none;
+}
+
+@media (max-width: 850px) {
+    main {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .profilePhoto {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    .profilePhoto img {
+        border-radius: 5px 5px 0px 0px;
+        width: 110px;
+    }
+
+    .leftHeader,
+    .rightHeader {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+        position: fixed;
+        left: 0;
+    }
+
+    .leftHeader {
+        justify-content: flex-end;
+        align-items: flex-end;
+        top: 0;
+        z-index: 1;
+    }
+
+    .rightHeader {
+        justify-content: flex-end;
+        align-items: flex-end;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .rightHeader a {
+        margin: 0px 1px;
+    }
+
+    .category {
+        min-width: calc(25vw - 20px);
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .rightIcon {
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .page {
+        margin-top: 80px;
+    }
+
 }
